@@ -17,10 +17,18 @@
     font-family: 'DM Sans' ;
     box-sizing: border-box;
     text-decoration:none; 
+
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
 .body{
     text-align: center;
+    overflow: overlay;
 
 }
 
@@ -28,6 +36,10 @@
     width: 37.5rem;
     margin-inline: auto;
     padding-inline: auto;
+}
+
+ul{
+    list-style: none;
 }
 
 /*==========HEADER==========================*/
@@ -215,14 +227,132 @@ nav.scroll svg:nth-child(1) path {
     fill: white;
 }
 
-nav.scroll svg:nth-child(2) path {
+nav.scroll button path {
     stroke: white;
 }
+
 
 .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+/*==========MENU-EXPANDED==========================*/
+
+
+// #body.menu-expanded .titles, .midle, .nubersInformations  {
+//     visibility: hidden;
+//     height: 0px;
+// }
+
+#body.menu-expanded > :not(nav)  {
+    display: none;
+}
+
+.menu, 
+.close-menu
+ {
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#body.menu-expanded .menu  {
+    opacity: 1;
+    visibility: visible;
+}
+
+#body.menu-expanded .close-menu  { 
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+
+    position: relative;
+    width: 375px;
+    height: 72px;
+
+    right: -15rem;
+   
+}
+
+
+.menu-expanded .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+
+    width: 100vw;
+    height: 100vh;
+
+    text-align: center;
+    padding-top: var(--nav-height);
+    
+}
+
+
+#body.menu-expanded nav  {
+    position: relative;
+
+}
+
+.menu li{
+    margin-top: 6rem;
+    
+}
+
+.menu li:last-child{
+    margin-bottom: 4.8rem;
+}
+
+.menu li a{
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.button{
+    background: #ffffff;
+    border-radius: 4rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    text-transform: uppercase;
+
+    color: #00856F;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 27.4rem;
+    height: 5.5rem;
+    
+}
+
+#body.menu-expanded .logo{
+    position: relative;
+    z-index: 10;
+}
+
+
+#body.menu-expanded .logo svg:nth-child(1) path {
+    fill: white;
+}
+
+#body.menu-expanded .logo svg:nth-child(2) path {
+    stroke: white;
+}
+
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 
