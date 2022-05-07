@@ -5,6 +5,9 @@
     --headline-color: #212529;
     --paragraph-color: #495057;
     --scroll-color: #04aa6d;
+    --back-color: #F7F9F9;
+    --secundary-color: #ffffff;
+    --cards-border-color: #DCE9E2;
 
     --nav-height: 7.2rem;
 
@@ -35,7 +38,7 @@ html, body {
 .wrapper{
     width: 37.5rem;
     margin-inline: auto;
-    padding-inline: auto;
+    padding-inline: 2.4rem;
 }
 
 ul{
@@ -79,6 +82,7 @@ header::before {
 }
 
 header h1{
+    text-align: center;
     font-size: 3.4rem;
     line-height: 130%;
     color: var(--headline-color);
@@ -88,6 +92,7 @@ header h1{
 }
 
 header h4{
+    text-align: center;
     font-size: 1.4rem;
     color: var(--primary-color);
 
@@ -95,6 +100,7 @@ header h4{
 }
 
 header p{
+    text-align: center;
     font-size: 1.8rem;
     line-height: 150%;
     font-weight: 400;
@@ -158,9 +164,6 @@ header button:hover {
 
     //-----------------\\
     position: absolute;
-    width: 327px;
-    height: 470px;
-    //left: 24px;
     top: 899px;
     //-----------------\\
 
@@ -169,22 +172,24 @@ header button:hover {
     
     margin-top: 0px;
 
-    border-radius: 0.6rem;
+    border-radius: 2rem;
     background: #fff;
 
-    //border:  solid 1px red;
+   border:  solid 1px #DCE9E2;
 
     :first-child{
         margin-top: 4rem;
     }
 
     .information{
-       // border: solid 1px blue;
+        //border: solid 1px blue;
 
         width: 16.7rem;
         height: 9rem;
         
         margin-bottom: 6rem;
+
+        text-align: center;
 
         h3{
             margin: 0%;
@@ -198,8 +203,6 @@ header button:hover {
             color: var(--primary-color);
         }
     }
-
-    
 
 
 }
@@ -239,12 +242,6 @@ nav.scroll button path {
 }
 
 /*==========MENU-EXPANDED==========================*/
-
-
-// #body.menu-expanded .titles, .midle, .nubersInformations  {
-//     visibility: hidden;
-//     height: 0px;
-// }
 
 #body.menu-expanded > :not(nav)  {
     display: none;
@@ -290,7 +287,6 @@ nav.scroll button path {
     padding-top: var(--nav-height);
     
 }
-
 
 #body.menu-expanded nav  {
     position: relative;
@@ -355,6 +351,102 @@ nav button {
     cursor: pointer;
 }
 
+/*==========SERVICES==========================*/
+
+  #services {
+       position: absolute;
+       top: 1151px;
+       width: 100%;
+       height: 2034px;
+       z-index: -2;
+
+       justify-content: center;
+
+       background-color: var(--back-color);
+      // border: solid 1px red;
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 34.7rem;
+            height: 2034px;
+
+            margin-left: auto;
+            margin-right: auto;
+
+
+            .header{
+                display: flex;
+                flex-direction: column;
+        
+                text-align: center;
+                width: 32.4rem;
+                height: 15.4rem;
+                
+                margin-top: 31.8rem;
+                margin-bottom: 6rem;
+        
+                h4{
+                    text-transform: uppercase;
+                    font-size: 2.4rem;
+                    margin-bottom: 1.6rem;
+                    color: var(--primary-color);
+                }
+        
+                h2{
+                    font-size: 3rem;
+                    
+                }
+        
+              
+            }
+
+
+            .cards{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                width: 32.7rem;
+                height: 140.2rem;
+
+                align-items: center;
+
+                .card{
+                    width: 30.7rem;
+                    height: 20.7rem;
+
+                    border-radius: 0.6rem;
+                    border: solid 0.1rem var(--cards-border-color);
+
+                    background-color: var(--secundary-color);
+
+                    padding: 2.4rem;
+                    margin-bottom: 3.2rem;
+
+                    h3{
+                        font-size: 2.1rem;
+                        text-align: center;
+
+                        margin-bottom: 1.6rem;
+                    }
+
+                    p{
+                        font-size: 1.6rem;
+                        text-align: center;
+
+                    }
+
+                }
+    
+            }
+        
+        }
+
+    
+  }
 
 
 
