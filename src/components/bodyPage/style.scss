@@ -29,6 +29,10 @@ html, body {
     height: 100%;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .body{
     text-align: center;
     overflow: overlay;
@@ -55,7 +59,7 @@ header{
     align-items: center;
     
    
-    margin-top: calc(4.1rem + var(--nav-height) ) ;
+    padding-top: calc(4.1rem + var(--nav-height) ) ;
 
     //background-color: #DCE9E2;
     
@@ -78,7 +82,13 @@ header::before {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -3;
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
 }
 
 header h1{
@@ -144,7 +154,7 @@ header button{
 }
 
 header button:hover {
-    background-color: #212529;
+    background-color: #055a18;
 }
 
 .img-model{
@@ -270,9 +280,14 @@ nav.scroll button path {
     height: 72px;
 
     right: -15rem;
+
+    
    
 }
 
+.menu{
+    transform: translateY(100%);
+}
 
 .menu-expanded .menu {
     position: fixed;
@@ -285,6 +300,10 @@ nav.scroll button path {
 
     text-align: center;
     padding-top: var(--nav-height);
+
+    //transition: opacity 1500ms;
+    transition: transform 500ms;
+    transform: translateY(0);
     
 }
 
@@ -352,7 +371,7 @@ nav button {
 }
 
 /*==========SERVICES==========================*/
-
+ 
   #services {
        position: absolute;
        top: 1151px;
@@ -361,10 +380,7 @@ nav button {
        z-index: -2;
 
        justify-content: center;
-
-       background-color: var(--back-color);
-      // border: solid 1px red;
-
+       
         .content{
             display: flex;
             flex-direction: column;
@@ -376,7 +392,8 @@ nav button {
             margin-left: auto;
             margin-right: auto;
 
-
+            background-color: var(--back-color);
+            
             .header{
                 display: flex;
                 flex-direction: column;
@@ -408,11 +425,10 @@ nav button {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                
 
                 width: 32.7rem;
                 height: 140.2rem;
-
-                align-items: center;
 
                 .card{
                     width: 30.7rem;
@@ -435,7 +451,7 @@ nav button {
 
                     p{
                         font-size: 1.6rem;
-                        text-align: center;
+                        text-align: left;
 
                     }
 
@@ -448,9 +464,224 @@ nav button {
     
   }
 
+/*==========SOBRE NÓS==========================*/
 
+#about{
+    position: absolute;
+    width: 100vw;
+    height: 96.9rem;
+    z-index: -2;
+   
+    top: 3185px;
 
+    justify-content: center;
 
+   // border: solid 1px red;
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        width: 34.7rem;
+        
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-top: 2.9rem;
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+
+       background-color: #fff;
+
+        h4{
+            text-transform: uppercase;
+            font-size: 2.4rem;
+            margin-bottom: 1.6rem;
+            color: var(--primary-color);
+
+        }
+
+        h2{
+            font-size: 3rem;
+            margin-bottom: 2.4rem;
+            
+        }
+
+        p{
+            font-size: 1.6rem;
+            text-align: justify;
+        }
+
+        img{
+            width: 32.7rem;
+            padding: 6rem 2.4rem 10rem ;
+            
+        }
+
+        // ================EFEITOS================\\
+
+        .efeitoImgAbout  {
+           transform: translateX(0);
+           transition: transform 1s;
+            
+        }
+       .efeitoImgAbout:hover  {
+            // border: solid 1px red;
+            // cursor: pointer;
+            transform: scale(1.3);
+            
+        }
+    }
+}
+
+/*==========CONTATO==========================*/
+
+#contact {
+    position: absolute;
+    width: 100vw;
+    height: 73.5rem;
+    z-index: -2;
+    
+    top: 4154px;
+
+    justify-content: center;
+
+    
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        width: 34.7rem;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-top: 2.9rem;
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+
+        background-color: var(--back-color);
+
+        .header {
+
+            h2{
+                font-size: 3rem;
+                margin-bottom: 3.2rem;
+            }
+
+            .get-contact{
+                display: flex;
+                gap: 0.8rem;
+                margin-bottom: 2rem;
+
+                p{
+                    font-size: 1.6rem;
+                }
+            }
+
+            .img{
+                 width: 32.7rem;
+                 padding: 6rem 2.4rem 10rem ;
+             }
+            
+        }
+
+       
+
+    }
+    
+
+    .header button {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.6rem;
+        padding: 1.6rem 3.2rem;
+
+        width: 26.3rem;
+        height: 5.2rem;
+
+        font-size: 1.4em;
+        font-weight: 700;
+        
+    
+        
+        background-color: var(--primary-color);
+        color: #fff;
+        align-items: center;
+
+        border: none;
+        border-radius: 4rem;
+
+        margin-bottom: 6rem;
+
+        cursor: pointer;
+
+        
+    }
+
+    .header button:hover {
+        background-color: #055a18;
+    }
+}
+
+/*==========footer==========================*/
+
+#footer {
+    position: absolute;
+    width: 100vw;
+    height: 28.5rem;
+    z-index: -2;
+
+    top: 482.9rem;
+    
+    justify-content: center;
+    
+    .content {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        width: 34.7rem;
+        height: 28.5rem;
+
+        margin-left: auto;
+        margin-right: auto;
+        background-color: var(--primary-color);
+
+        .logo {
+            padding-top: 6rem;
+            padding-bottom: 2.4rem;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+
+            margin-bottom: 3.2rem;
+            gap: 1.2rem;
+            color: var(--back-color);
+
+            p{
+                font-size: 1.6rem;
+            }
+        }
+
+        .socialMedia {
+            display: flex;
+            gap: 6rem;
+        }
+    }
+}
 
 
 
